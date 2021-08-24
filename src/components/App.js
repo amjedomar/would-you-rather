@@ -6,8 +6,10 @@ import Login from './Login';
 import Nav from './Nav';
 import {Route} from 'react-router-dom';
 import QuestionList from './QuestionList';
+import QuestionPage from './QuestionPage';
 import NewQuestion from './NewQuestion';
 import LeaderBoard from './LeaderBoard';
+import LoadingBar from './LoadingBar';
 
 class App extends Component {
   componentDidMount() {
@@ -23,12 +25,15 @@ class App extends Component {
 
     return (
       <>
+        <LoadingBar />
+
         <Nav />
 
         <div className="container">
           {this.props.authed ? (
             <>
               <Route path="/" exact component={QuestionList} />
+              <Route path="/questions/:questionId" exact component={QuestionPage} />
               <Route path="/new" exact component={NewQuestion} />
               <Route path="/leaderboard" exact component={LeaderBoard} />
             </>
