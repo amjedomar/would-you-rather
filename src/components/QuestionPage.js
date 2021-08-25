@@ -8,7 +8,7 @@ const QuestionPage = ({question}) => {
     return (
       <div className="not-found">
         <p className="not-found-emoji">:'(</p>
-        <p className="not-found-text">Sorry the poll doesn't exists</p>
+        <p className="not-found-text">Sorry the question doesn't exists</p>
         <Link className="button contained md" to="/">Back to the Home</Link>
       </div>
     );
