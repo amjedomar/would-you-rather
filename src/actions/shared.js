@@ -1,6 +1,6 @@
 import {_getQuestions, _getUsers} from '../utils/_DATA';
-import {addUsers} from './users';
-import {addQuestions} from './questions';
+import {receiveUsers} from './users';
+import {receiveQuestions} from './questions';
 import {setInitialized} from './initialized';
 
 export const handleInitialData = () => dispatch => {
@@ -8,8 +8,8 @@ export const handleInitialData = () => dispatch => {
     _getUsers(),
     _getQuestions()
   ]).then(([ users, questions ]) => {
-    dispatch(addUsers(users));
-    dispatch(addQuestions(questions));
+    dispatch(receiveUsers(users));
+    dispatch(receiveQuestions(questions));
     dispatch(setInitialized());
   });
 };

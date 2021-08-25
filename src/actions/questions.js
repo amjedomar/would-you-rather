@@ -1,18 +1,19 @@
 import {_saveQuestion, _saveQuestionAnswer} from '../utils/_DATA';
 import {hideLoading, showLoading} from 'react-redux-loading-bar';
 
-export const ADD_QUESTIONS = 'ADD_QUESTIONS';
-export const ADD_QUESTION = 'ADD_QUESTION';
+export const RECEIVE_QUESTIONS = 'RECEIVE_QUESTIONS';
+export const SAVE_QUESTION = 'SAVE_QUESTION';
 export const ANSWER_QUESTION = 'ANSWER_QUESTION';
 
-export const addQuestions = (questions) => ({
-  type: ADD_QUESTIONS,
+export const receiveQuestions = (questions) => ({
+  type: RECEIVE_QUESTIONS,
   questions
 });
 
-const addQuestion = (question) => ({
-  type: ADD_QUESTION,
-  question
+const saveQuestion = ({userId, question}) => ({
+  type: SAVE_QUESTION,
+  question,
+  userId
 });
 
 const answerQuestion = ({userId, questionId, answer}) => ({
@@ -32,7 +33,10 @@ export const handleAddQuestion = (optionOneText, optionTwoText) => (dispatch, ge
     optionTwoText,
     author: authedUser
   }).then(question => {
-    dispatch(addQuestion(question));
+    dispatch(saveQuestion({
+      question,
+      userId: authedUser
+    }));
     dispatch(hideLoading());
   }).catch(() => {
     dispatch(hideLoading());

@@ -19,13 +19,14 @@ class Login extends Component {
   render() {
     return (
       <div>
-        <h3 style={{marginBottom: 4}} className="center">Login</h3>
-        <p style={{marginBottom: 24}} className="center">please login to continue</p>
+        <h3 className="login-title">Login</h3>
+        <p className="login-description">please login to continue</p>
 
-        <UserSelect onChange={this.handleChange} />
+        <div className="login-select">
+          <UserSelect onChange={this.handleChange} />
+        </div>
 
         <button
-          style={{marginTop: 16}}
           disabled={this.state.userId === null}
           className="button contained fullwidth md"
           onClick={this.handleSubmit}

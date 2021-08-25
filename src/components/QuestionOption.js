@@ -22,7 +22,7 @@ const QuestionOption = props => {
       </p>
 
       <div className="progress">
-        {percentage > 0 && (
+        {percentage > 0 ? (
           <div
             className="progress-bar"
             style={{
@@ -32,7 +32,7 @@ const QuestionOption = props => {
           >
             {percentage}%
           </div>
-        )}
+        ) : '0%'}
       </div>
 
       <p className="question-option-votes">

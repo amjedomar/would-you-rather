@@ -1,6 +1,6 @@
-export const ADD_USERS = 'ADD_USERS';
+export const RECEIVE_USERS = 'RECEIVE_USERS';
 
-export const addUsers = (users) => ({
-  type: ADD_USERS,
+export const receiveUsers = (users) => ({
+  type: RECEIVE_USERS,
   users
 });

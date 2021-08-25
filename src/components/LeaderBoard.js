@@ -5,7 +5,7 @@ const LeaderBoard = ({userIds}) => {
   return (
     <div>
       {userIds.map(id => (
-        <UserDetails id={id} />
+        <UserDetails key={id} id={id} />
       ))}
     </div>
   );

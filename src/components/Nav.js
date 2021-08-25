@@ -71,7 +71,7 @@ class Nav extends Component {
               <div className="nav-section">
                 <div className="nav-item">
                   <img
-                    style={{marginRight: 8}}
+                    className="nav-avatar"
                     src={authedUser.avatarURL}
                     alt="Your Avatar"
                     width="24"

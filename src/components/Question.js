@@ -18,7 +18,7 @@ const Question = ({question}) => {
       </div>
 
       <div className="question-body">
-        <div className="question-author-avatar">
+        <div className="question-author-avatar-wrapper">
           <img
             src={author.avatarURL}
             alt={`${author.avatarURL}'s avatar`}
