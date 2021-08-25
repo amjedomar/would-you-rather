@@ -43,13 +43,13 @@ export const handleSaveQuestion = (optionOneText, optionTwoText) => (dispatch, g
 export const handleAnswerQuestion = (qid, answer) => (dispatch, getState) => {
   const {authedUser} = getState();
 
-  dispatch(showLoading());
-
   const payload = {
     authedUser,
     qid,
     answer
   };
+
+  dispatch(showLoading());
 
   _saveQuestionAnswer(payload).then(() => {
     dispatch(answerQuestion(payload));

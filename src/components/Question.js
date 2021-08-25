@@ -22,8 +22,8 @@ const Question = ({question}) => {
           <img
             src={author.avatarURL}
             alt={`${author.avatarURL}'s avatar`}
-            width="64px"
-            height="64px"
+            width="80px"
+            height="80px"
           />
         </div>
 
