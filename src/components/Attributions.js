@@ -1,6 +1,6 @@
-const Copyright = () => {
+const Attributions = () => {
   return (
-    <div className="copyright-wrapper">
+    <div className="attributions">
       Icons made by
       {' '}
       <a className="link" href="https://www.freepik.com" title="Freepik">Freepik</a>
@@ -12,4 +12,4 @@ const Copyright = () => {
   );
 };
 
-export default Copyright;
+export default Attributions;

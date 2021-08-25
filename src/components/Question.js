@@ -28,11 +28,11 @@ const Question = ({question}) => {
         </div>
 
         <div className="question-details">
-          <p className="bold mb8">
+          <p className="question-title">
             Would You Rather
           </p>
 
-          <p className="mb12">
+          <p className="question-brief">
             ...{optionOne.text.slice(0, 15)}...
           </p>
 

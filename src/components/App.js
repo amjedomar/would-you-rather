@@ -1,5 +1,5 @@
 import {Component} from 'react';
-import Copyright from './Copyright';
+import Attributions from './Attributions';
 import {connect} from 'react-redux';
 import {handleInitialData} from '../actions/shared';
 import Login from './Login';
@@ -41,7 +41,7 @@ class App extends Component {
             <Login />
           )}
 
-          <Copyright />
+          <Attributions />
         </div>
       </>
     );
