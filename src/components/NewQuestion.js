@@ -15,7 +15,7 @@ class NewQuestion extends Component {
 
     this.setState({
       [name]: value
-    })
+    });
   };
 
   handleSubmit = e => {

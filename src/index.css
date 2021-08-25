@@ -313,15 +313,15 @@ body {
   font-weight: bold;
 }
 
-.question-answer {
+.question-option-field {
   margin-bottom: 16px;
 }
 
-.question-answer-radio {
+.question-option-field-radio {
   margin-right: 8px;
 }
 
-.question-answer-label {
+.question-option-field-label {
   cursor: pointer;
 }
 

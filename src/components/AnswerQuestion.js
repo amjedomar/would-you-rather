@@ -1,4 +1,5 @@
 import {Component} from 'react';
+import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import {handleAnswerQuestion} from '../actions/questions';
 
@@ -30,38 +31,38 @@ class AnswerQuestion extends Component {
         </h3>
 
         <form onSubmit={this.handleSubmit}>
-          <div className="question-answer">
+          <div className="question-option-field">
             <input
-              className="question-answer-radio"
+              className="question-option-field-radio"
               id="optionOne"
               type="radio"
-              name="answer"
+              name="option"
               value="optionOne"
               checked={this.state.answer === 'optionOne'}
               onChange={this.handleChange}
             />
 
             <label
-              className="question-answer-label"
+              className="question-option-field-label"
               htmlFor="optionOne"
             >
               {optionOne.text}
             </label>
           </div>
 
-          <div className="question-answer">
+          <div className="question-option-field">
             <input
-              className="question-answer-radio"
+              className="question-option-field-radio"
               id="optionTwo"
               type="radio"
-              name="answer"
+              name="option"
               value="optionTwo"
               checked={this.state.answer === 'optionTwo'}
               onChange={this.handleChange}
             />
 
             <label
-              className="question-answer-label"
+              className="question-option-field-label"
               htmlFor="optionTwo"
             >
               {optionTwo.text}
@@ -81,7 +82,11 @@ class AnswerQuestion extends Component {
   }
 }
 
-const mapStateToProps = ({ questions, users }, { questionId }) => {
+AnswerQuestion.propTypes = {
+  questionId: PropTypes.string.isRequired
+};
+
+const mapStateToProps = ({questions, users}, {questionId}) => {
   const {id, optionOne, optionTwo} = questions[questionId];
 
   return {

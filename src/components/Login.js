@@ -9,7 +9,7 @@ class Login extends Component {
   };
 
   handleChange = (userId) => {
-    this.setState({ userId });
+    this.setState({userId});
   };
 
   handleSubmit = () => {

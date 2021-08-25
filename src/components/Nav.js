@@ -42,7 +42,7 @@ class Nav extends Component {
   render() {
     const rootClassname = ['nav', this.state.show ? 'show' : ''].join(' ');
 
-    const {user} = this.props;
+    const {authedUser} = this.props;
 
     return (
       <>
@@ -67,18 +67,18 @@ class Nav extends Component {
               ))}
             </div>
 
-            {user && (
+            {authedUser && (
               <div className="nav-section">
                 <div className="nav-item">
                   <img
                     style={{marginRight: 8}}
-                    src={user.avatarURL}
+                    src={authedUser.avatarURL}
                     alt="Your Avatar"
                     width="24"
                     height="24"
                   />
 
-                  <span>{user.name}</span>
+                  <span>{authedUser.name}</span>
                 </div>
 
                 <button onClick={this.logout} className="nav-item nav-link">
@@ -102,7 +102,7 @@ class Nav extends Component {
 }
 
 const mapStateToProps = ({users, authedUser}) => ({
-  user: authedUser ? users[authedUser] : null
+  authedUser: authedUser ? users[authedUser] : null
 });
 
 export default connect(mapStateToProps)(Nav);

@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 
 const UserDetails = props => {
@@ -52,6 +53,10 @@ const UserDetails = props => {
   );
 };
 
+UserDetails.propTypes = {
+  id: PropTypes.string.isRequired
+};
+
 const mapStateToProps = ({users}, {id}) => {
   const user = users[id];
 
@@ -61,7 +66,7 @@ const mapStateToProps = ({users}, {id}) => {
       questions: user.questions.length,
       answers: Object.keys(user.answers).length
     }
-  }
+  };
 };
 
 export default connect(mapStateToProps)(UserDetails);

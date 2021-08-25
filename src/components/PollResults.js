@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import QuestionOption from './QuestionOption';
 
@@ -21,7 +22,11 @@ const PollResults = props => {
       </div>
     </div>
   );
-}
+};
+
+PollResults.propTypes = {
+  questionId: PropTypes.string.isRequired
+};
 
 const mapStateToProps = ({ questions, authedUser }, { questionId }) => {
   const question = questions[questionId];

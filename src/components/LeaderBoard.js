@@ -1,9 +1,7 @@
 import {connect} from 'react-redux';
 import UserDetails from './UserDetails';
 
-const LeaderBoard = props => {
-  const {userIds} = props;
-
+const LeaderBoard = ({userIds}) => {
   return (
     <div>
       {userIds.map(id => (
