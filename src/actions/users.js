@@ -1,6 +1,6 @@
-export const SET_USERS = 'SET_USERS';
+export const ADD_USERS = 'ADD_USERS';
 
-export const setUsers = (users) => ({
-  type: SET_USERS,
+export const addUsers = (users) => ({
+  type: ADD_USERS,
   users
 });

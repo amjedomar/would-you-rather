@@ -1,9 +1,9 @@
-import {SET_USERS} from '../actions/users';
+import {ADD_USERS} from '../actions/users';
 import {ANSWER_QUESTION} from '../actions/questions';
 
 const users = (state = {}, action) => {
   switch (action.type) {
-    case SET_USERS:
+    case ADD_USERS:
       return {
         ...state,
         ...action.users

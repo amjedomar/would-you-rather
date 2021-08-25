@@ -1,13 +1,13 @@
-import {ANSWER_QUESTION, SAVE_QUESTION, SET_QUESTIONS} from '../actions/questions';
+import {ANSWER_QUESTION, ADD_QUESTION, ADD_QUESTIONS} from '../actions/questions';
 
 const questions = (state = {}, action) => {
   switch (action.type) {
-    case SET_QUESTIONS:
+    case ADD_QUESTIONS:
       return {
         ...state,
         ...action.questions
       };
-    case SAVE_QUESTION:
+    case ADD_QUESTION:
       return {
         ...state,
         [action.question.id] : action.question
