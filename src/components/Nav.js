@@ -11,7 +11,7 @@ class Nav extends Component {
     },
     {
       label: 'New Question',
-      to: '/new'
+      to: '/add'
     },
     {
       label: 'Leader Board',

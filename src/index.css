@@ -399,6 +399,10 @@ body {
   margin-bottom: 16px;
 }
 
+.question-option.voted > .question-option-text {
+  color: #3f51b5;
+}
+
 .question-option.voted > .question-option-vote-mark {
   display: inline-flex;
   align-items: center;
@@ -434,4 +438,37 @@ body {
   height: 100%;
   background-color: #3f51b5;
   color: #fff;
+}
+
+/* new-question */
+.new-question-title {
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+
+.new-question-subtitle {
+  font-size: 16px;
+  margin-bottom: 16px;
+}
+
+.new-question-or-text {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* input */
+.input {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #9e9e9e;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.input:focus {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #3f51b5;
+  border-radius: 4px;
 }

@@ -36,7 +36,7 @@ class QuestionList extends Component {
 
 const mapStateToProps = ({ questions, authedUser }) => {
   const questionIds = Object.keys(questions).sort((a, b) => {
-    return questions[a].timestamp - questions[b].timestamp;
+    return questions[b].timestamp - questions[a].timestamp;
   });
 
   const unansweredQuestionIds = [];
