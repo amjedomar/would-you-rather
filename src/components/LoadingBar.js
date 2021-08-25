@@ -1,6 +1,6 @@
 import RawLoadingBard from 'react-redux-loading-bar';
 
-const LoadingBar = props => {
+const LoadingBar = () => {
   // I styled `LoadingBar` using `style` prop rather than `className` prop because
   // `className` doesn't works with this package
   // see https://github.com/mironov/react-redux-loading-bar/issues/40

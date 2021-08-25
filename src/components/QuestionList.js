@@ -34,10 +34,8 @@ class QuestionList extends Component {
   }
 }
 
-const mapStateToProps = ({ questions, authedUser }) => {
-  const questionIds = Object.keys(questions).sort((a, b) => {
-    return questions[b].timestamp - questions[a].timestamp;
-  });
+const mapStateToProps = ({questions, authedUser}) => {
+  const questionIds = Object.keys(questions).sort((a, b) => questions[b].timestamp - questions[a].timestamp);
 
   const unansweredQuestionIds = [];
   const answeredQuestionIds = [];
@@ -45,10 +43,7 @@ const mapStateToProps = ({ questions, authedUser }) => {
   questionIds.forEach(questionId => {
     const question = questions[questionId];
 
-    if (
-      question.optionOne.votes.includes(authedUser) ||
-      question.optionTwo.votes.includes(authedUser)
-    ) {
+    if (question.optionOne.votes.includes(authedUser) || question.optionTwo.votes.includes(authedUser)) {
       answeredQuestionIds.push(questionId);
     } else {
       unansweredQuestionIds.push(questionId);

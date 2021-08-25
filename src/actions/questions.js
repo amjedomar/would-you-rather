@@ -15,14 +15,14 @@ const addQuestion = (question) => ({
   question
 });
 
-const answerQuestion = ({authedUser, qid, answer}) => ({
+const answerQuestion = ({userId, questionId, answer}) => ({
   type: ANSWER_QUESTION,
-  authedUser,
-  qid,
+  userId,
+  questionId,
   answer
 });
 
-export const handleSaveQuestion = (optionOneText, optionTwoText) => (dispatch, getState) => {
+export const handleAddQuestion = (optionOneText, optionTwoText) => (dispatch, getState) => {
   const {authedUser} = getState();
 
   dispatch(showLoading());
@@ -40,19 +40,21 @@ export const handleSaveQuestion = (optionOneText, optionTwoText) => (dispatch, g
   });
 };
 
-export const handleAnswerQuestion = (qid, answer) => (dispatch, getState) => {
+export const handleAnswerQuestion = (questionId, answer) => (dispatch, getState) => {
   const {authedUser} = getState();
-
-  const payload = {
-    authedUser,
-    qid,
-    answer
-  };
 
   dispatch(showLoading());
 
-  _saveQuestionAnswer(payload).then(() => {
-    dispatch(answerQuestion(payload));
+  _saveQuestionAnswer({
+    authedUser,
+    qid: questionId,
+    answer
+  }).then(() => {
+    dispatch(answerQuestion({
+      userId: authedUser,
+      questionId,
+      answer
+    }));
     dispatch(hideLoading());
   }).catch(() => {
     dispatch(hideLoading());

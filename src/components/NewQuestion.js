@@ -1,6 +1,6 @@
 import {Component} from 'react';
 import {connect} from 'react-redux';
-import {handleSaveQuestion} from '../actions/questions';
+import {handleAddQuestion} from '../actions/questions';
 import {Redirect} from 'react-router-dom';
 
 class NewQuestion extends Component {
@@ -23,7 +23,7 @@ class NewQuestion extends Component {
 
     const {optionOneText, optionTwoText} = this.state;
 
-    this.props.dispatch(handleSaveQuestion(optionOneText, optionTwoText));
+    this.props.dispatch(handleAddQuestion(optionOneText, optionTwoText));
 
     this.setState({toHome: true});
   };

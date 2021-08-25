@@ -5,7 +5,7 @@ import {connect} from 'react-redux';
 const UserSelect = props => {
   const options = Object.values(props.users).map(user => ({
     value: user.id,
-    // The code of usage img with react-select is taken from https://stackoverflow.com/a/56575446/8148505
+    // The code of img usage with react-select is taken from https://stackoverflow.com/a/56575446/8148505
     label: (
       <div className="select-option">
         <img

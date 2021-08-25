@@ -1,15 +1,15 @@
 import {Component} from 'react';
-import Attributions from './Attributions';
 import {connect} from 'react-redux';
-import {handleInitialData} from '../actions/shared';
-import Login from './Login';
-import Nav from './Nav';
 import {Route} from 'react-router-dom';
+import {handleInitialData} from '../actions/shared';
+import LoadingBar from './LoadingBar';
+import Nav from './Nav';
+import Login from './Login';
 import QuestionList from './QuestionList';
 import QuestionPage from './QuestionPage';
 import NewQuestion from './NewQuestion';
 import LeaderBoard from './LeaderBoard';
-import LoadingBar from './LoadingBar';
+import Attributions from './Attributions';
 
 class App extends Component {
   componentDidMount() {
@@ -48,7 +48,7 @@ class App extends Component {
   }
 }
 
-const mapStateToProps = ({ initialized, authedUser }) => ({
+const mapStateToProps = ({initialized, authedUser}) => ({
   initialized,
   authed: authedUser !== null
 });

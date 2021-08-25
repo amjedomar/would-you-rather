@@ -3,8 +3,8 @@ import PollResults from './PollResults';
 import AnswerQuestion from './AnswerQuestion';
 import {Link} from 'react-router-dom';
 
-const QuestionPage = (props) => {
-  if (!props.question) {
+const QuestionPage = ({question}) => {
+  if (!question) {
     return (
       <div className="not-found">
         <p className="not-found-emoji">:'(</p>
@@ -18,7 +18,7 @@ const QuestionPage = (props) => {
     id,
     author,
     isAnswered
-  } = props.question;
+  } = question;
 
   return (
     <div className="question">

@@ -11,14 +11,14 @@ const users = (state = {}, action) => {
     case ANSWER_QUESTION:
       return {
         ...state,
-        [action.authedUser]: {
-          ...state[action.authedUser],
+        [action.userId]: {
+          ...state[action.userId],
           answers: {
-            ...state[action.authedUser].answers,
-            [action.qid]: action.answer
+            ...state[action.userId].answers,
+            [action.questionId]: action.answer
           }
         }
-      }
+      };
     default:
       return state;
   }

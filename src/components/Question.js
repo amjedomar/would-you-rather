@@ -57,7 +57,7 @@ const mapStateToProps = ({questions, users}, {id}) => {
       ...question,
       author: users[question.author]
     }
-  }
+  };
 };
 
 export default connect(mapStateToProps)(Question);
