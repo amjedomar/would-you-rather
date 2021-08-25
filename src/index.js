@@ -1,12 +1,12 @@
 import {StrictMode} from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './components/App';
 import {createStore} from 'redux';
-import rootReducer from './reducers';
 import {Provider} from 'react-redux';
-import middlewares from './middlewares';
 import {BrowserRouter as Router} from 'react-router-dom';
+import App from './components/App';
+import rootReducer from './reducers';
+import middlewares from './middlewares';
+import './index.css';
 
 const store = createStore(rootReducer, middlewares);
 

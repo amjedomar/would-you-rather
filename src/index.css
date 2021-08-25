@@ -19,7 +19,7 @@ body {
   font-weight: bold;
 }
 
-/* alignment */
+/* alignments */
 .center {
   text-align: center;
 }
@@ -233,7 +233,6 @@ body {
 .container {
   width: 100%;
   display: block;
-  box-sizing: border-box;
   margin: 0 auto;
   padding: 0 16px;
 }
@@ -367,6 +366,7 @@ body {
   margin-bottom: 10px;
 }
 
+/* question-options */
 .question-options {
   padding: 8px 0;
 }
@@ -488,7 +488,7 @@ body {
 }
 
 .user-details-head,
-.user-details-footer{
+.user-details-footer {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -502,6 +502,7 @@ body {
   padding: 0 16px;
 }
 
+/* score */
 .score {
   display: flex;
   flex-direction: column;
